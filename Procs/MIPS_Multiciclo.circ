@@ -114,7 +114,6 @@
     <wire from="(120,300)" to="(150,300)"/>
     <wire from="(180,910)" to="(270,910)"/>
     <wire from="(500,450)" to="(500,560)"/>
-    <wire from="(260,690)" to="(260,800)"/>
     <wire from="(250,640)" to="(460,640)"/>
     <wire from="(640,600)" to="(640,890)"/>
     <wire from="(500,450)" to="(520,450)"/>
@@ -123,6 +122,7 @@
     <wire from="(270,330)" to="(270,510)"/>
     <wire from="(130,860)" to="(270,860)"/>
     <wire from="(920,400)" to="(930,400)"/>
+    <wire from="(260,740)" to="(260,800)"/>
     <wire from="(1030,350)" to="(1040,350)"/>
     <wire from="(450,810)" to="(1220,810)"/>
     <wire from="(440,740)" to="(440,930)"/>
@@ -147,6 +147,7 @@
     <wire from="(570,330)" to="(590,330)"/>
     <wire from="(1040,350)" to="(1040,520)"/>
     <wire from="(680,360)" to="(680,970)"/>
+    <wire from="(260,740)" to="(280,740)"/>
     <wire from="(500,340)" to="(500,450)"/>
     <wire from="(690,400)" to="(690,560)"/>
     <wire from="(400,850)" to="(400,890)"/>
@@ -420,6 +421,7 @@
     <wire from="(360,560)" to="(500,560)"/>
     <wire from="(180,330)" to="(190,330)"/>
     <wire from="(910,460)" to="(910,1030)"/>
+    <wire from="(260,690)" to="(260,740)"/>
     <wire from="(80,310)" to="(90,310)"/>
     <wire from="(1040,230)" to="(1050,230)"/>
     <wire from="(820,250)" to="(830,250)"/>
@@ -463,6 +465,11 @@
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="label" val="ALUSrcA"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(280,740)" name="Probe">
+      <a name="facing" val="west"/>
+      <a name="label" val="JumpReg"/>
       <a name="labelloc" val="east"/>
     </comp>
     <comp lib="0" loc="(1220,850)" name="Pin">
@@ -3365,7 +3372,6 @@
     <wire from="(190,220)" to="(270,220)"/>
     <wire from="(210,230)" to="(210,470)"/>
     <wire from="(210,470)" to="(540,470)"/>
-    <wire from="(480,190)" to="(560,190)"/>
     <wire from="(610,110)" to="(610,350)"/>
     <wire from="(570,180)" to="(570,510)"/>
     <wire from="(790,410)" to="(840,410)"/>
@@ -3423,6 +3429,7 @@
     <wire from="(600,390)" to="(840,390)"/>
     <wire from="(620,100)" to="(620,310)"/>
     <wire from="(540,550)" to="(710,550)"/>
+    <wire from="(470,190)" to="(560,190)"/>
     <wire from="(420,110)" to="(450,110)"/>
     <wire from="(470,90)" to="(630,90)"/>
     <wire from="(590,140)" to="(590,430)"/>
@@ -3539,8 +3546,8 @@
       <a name="label" val="IorD"/>
     </comp>
     <comp lib="0" loc="(450,110)" name="Splitter">
-      <a name="fanout" val="16"/>
-      <a name="incoming" val="16"/>
+      <a name="fanout" val="17"/>
+      <a name="incoming" val="17"/>
       <a name="appear" val="legacy"/>
       <a name="bit0" val="15"/>
       <a name="bit1" val="14"/>
@@ -3564,8 +3571,8 @@
       <a name="dataWidth" val="4"/>
       <a name="contents">addr/data: 10 4
 1 6 4*0 7 25*0 1 9 30*0
-1 8 494*0 1 2 3 4 124*0
-1 2 5
+1 8 462*0 1 2 a 4 28*0
+1 2 3 4 124*0 1 2 5
 </a>
     </comp>
     <comp lib="0" loc="(540,650)" name="Pin">
@@ -3584,9 +3591,6 @@
       <a name="tristate" val="false"/>
       <a name="label" val="RegWrite"/>
     </comp>
-    <comp lib="6" loc="(362,105)" name="Text">
-      <a name="text" val="Geração da saída"/>
-    </comp>
     <comp lib="0" loc="(540,630)" name="Pin">
       <a name="tristate" val="false"/>
       <a name="label" val="MemToReg"/>
@@ -3594,6 +3598,9 @@
     <comp lib="0" loc="(540,590)" name="Pin">
       <a name="tristate" val="false"/>
       <a name="label" val="MemRead"/>
+    </comp>
+    <comp lib="6" loc="(362,105)" name="Text">
+      <a name="text" val="Geração da saída"/>
     </comp>
     <comp lib="0" loc="(890,360)" name="Pin">
       <a name="facing" val="west"/>
@@ -3649,10 +3656,10 @@
     </comp>
     <comp lib="4" loc="(400,50)" name="ROM">
       <a name="addrWidth" val="4"/>
-      <a name="dataWidth" val="16"/>
-      <a name="contents">addr/data: 4 16
+      <a name="dataWidth" val="17"/>
+      <a name="contents">addr/data: 4 17
 5210 30 60 3000 480 2800 48 180
-8045 4002
+18045 4002 13000
 </a>
     </comp>
     <comp lib="6" loc="(351,221)" name="Text">
